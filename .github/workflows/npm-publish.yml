@@ -76,9 +76,8 @@ jobs:
           workspaces: rust
       - name: Install 7-Zip ARM
         run: |
-          New-Item -Path 'C:\7zip' -ItemType Directory
-          Invoke-WebRequest https://7-zip.org/a/7z2408-arm64.exe -OutFile C:\7zip\7z-installer.exe
-          Start-Process -FilePath C:\7zip\7z-installer.exe -ArgumentList '/S' -Wait
+          Invoke-WebRequest https://7-zip.org/a/7z2408-arm64.exe -OutFile 7z-installer.exe
+          Start-Process -FilePath 7z-installer.exe -ArgumentList '/S' -Wait
         shell: powershell
       - name: Add 7-Zip to PATH
         run: Add-Content $env:GITHUB_PATH "C:\Program Files\7-Zip"
@@ -186,9 +185,8 @@ jobs:
           workspaces: rust
       - name: Install 7-Zip ARM
         run: |
-          New-Item -Path 'C:\7zip' -ItemType Directory
-          Invoke-WebRequest https://7-zip.org/a/7z2408-arm64.exe -OutFile C:\7zip\7z-installer.exe
-          Start-Process -FilePath C:\7zip\7z-installer.exe -ArgumentList '/S' -Wait
+          Invoke-WebRequest https://7-zip.org/a/7z2408-arm64.exe -OutFile 7z-installer.exe
+          Start-Process -FilePath 7z-installer.exe -ArgumentList '/S' -Wait
         shell: powershell
       - name: Add 7-Zip to PATH
         run: Add-Content $env:GITHUB_PATH "C:\Program Files\7-Zip"
