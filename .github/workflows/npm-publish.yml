@@ -124,7 +124,7 @@ jobs:
         with:
           name: node-native-windows-arm64
           path: |
-            node/dist/*.node
+            node/dist/lancedb-vectordb-win32-arm64*.tgz
 
   nodejs-windows-arm64:
     name: lancedb win32-arm64-msvc
