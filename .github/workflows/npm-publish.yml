@@ -7,7 +7,6 @@ jobs:
   node-windows-arm64:
     name: vectordb win32-arm64-msvc
     runs-on: windows-4x-arm
-    if: startsWith(github.ref, 'refs/tags/v')
     steps:
       - uses: actions/checkout@v4
       - name: Install Git
