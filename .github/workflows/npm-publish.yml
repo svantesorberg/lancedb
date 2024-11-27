@@ -102,7 +102,6 @@ jobs:
           $NodeVersion = "v20.18.1"
           if (Test-Path 'C:\node') {
               Write-Host "Node directory exists, skipping installation"
-              return
           } else {
             New-Item -Path C:\node -ItemType Directory
             Set-Location C:\node
