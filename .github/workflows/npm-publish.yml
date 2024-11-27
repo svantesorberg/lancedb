@@ -104,11 +104,12 @@ jobs:
           if (Test-Path 'C:\node') {
               Write-Host "Node directory exists, skipping installation"
               return
-            New-Item -Path C:\node -ItemType Directory
-            Set-Location C:\node
-            Invoke-WebRequest -Uri "https://nodejs.org/download/release/$NodeVersion/node-$NodeVersion-win-arm64.zip" -OutFile "node.zip"
-            & 'C:\Program Files\7-Zip\7z.exe' x node.zip
-            Add-Content $env:GITHUB_PATH "C:\node\node-$NodeVersion-win-arm64"
+          }
+          New-Item -Path C:\node -ItemType Directory
+          Set-Location C:\node
+          Invoke-WebRequest -Uri "https://nodejs.org/download/release/$NodeVersion/node-$NodeVersion-win-arm64.zip" -OutFile "node.zip"
+          & 'C:\Program Files\7-Zip\7z.exe' x node.zip
+          Add-Content $env:GITHUB_PATH "C:\node\node-$NodeVersion-win-arm64"
         shell: powershell
       - name: Install npm dependencies
         run: |
@@ -213,11 +214,12 @@ jobs:
           if (Test-Path 'C:\node') {
               Write-Host "Node directory exists, skipping installation"
               return
-            New-Item -Path C:\node -ItemType Directory
-            Set-Location C:\node
-            Invoke-WebRequest -Uri "https://nodejs.org/download/release/$NodeVersion/node-$NodeVersion-win-arm64.zip" -OutFile "node.zip"
-            & 'C:\Program Files\7-Zip\7z.exe' x node.zip
-            Add-Content $env:GITHUB_PATH "C:\node\node-$NodeVersion-win-arm64"
+          }
+          New-Item -Path C:\node -ItemType Directory
+          Set-Location C:\node
+          Invoke-WebRequest -Uri "https://nodejs.org/download/release/$NodeVersion/node-$NodeVersion-win-arm64.zip" -OutFile "node.zip"
+          & 'C:\Program Files\7-Zip\7z.exe' x node.zip
+          Add-Content $env:GITHUB_PATH "C:\node\node-$NodeVersion-win-arm64"
         shell: powershell
       - name: Install npm dependencies
         run: |
