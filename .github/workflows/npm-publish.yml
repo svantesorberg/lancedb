@@ -461,7 +461,7 @@ jobs:
         with:
           name: node-native-windows-arm64
           path: |
-            node/dist/*.node
+            node/dist/lancedb-vectordb-win32-arm64*.tgz
 
   nodejs-windows:
     name: lancedb ${{ matrix.target }}
